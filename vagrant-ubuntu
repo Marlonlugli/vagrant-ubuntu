@@ -1,0 +1,9 @@
+Vagrant.configure("2") do |config|
+    config.vm.provider "virtualbox" do |v|
+        v.name = "maquina_ubuntu"
+        v.memory = 512
+        v.cpus = 1
+    end
+     config.vm.box = "hashicorp/bionic64"
+     config.vm.network "public_network"
+end
